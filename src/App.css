@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-next:focus {
+  font-size: inherit;
+  color: rgb(118, 117, 117)!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-carousel .slick-prev::before { 
+  color: currentColor !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slick-arrow.slick-prev {
+  font-size: 2rem !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ant-carousel .slick-next::before {
+  color: currentColor !important;
+}
+.slick-slider.slick-initialized{
+  position: relative;
+}
+span.anticon.anticon-left.slick-arrow.slick-prev{
+  position: absolute;
+  left: 20px;
+}
+span.anticon.anticon-right.slick-arrow.slick-next{
+  position: absolute;
+  right: 20px;
+}
+.slick-arrow.slick-next {
+  font-size: 2rem !important;
+}
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  left: 10px;
+  z-index: 2;
+
+}
+body{
+  @apply bg-navy !important;
+}
+.carousel-item-slide{
+  @apply md:w-12 md:h-12 w-6 h-6
+}
+.underline-text {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+.underline-text:after {
+  @apply bg-cyan;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  height: 4px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.underline-text:hover:after,
+.underline-text:focus:after,
+.underline-text:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
