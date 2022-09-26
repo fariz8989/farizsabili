@@ -36,7 +36,11 @@ function Navbar(props) {
             className="text-gray-400 font-mono hover:cursor-pointer hover:text-cyan mx-8 font-bold hover:text-red1 transition ease-out duration-500 text-lg">My Work</span>
    
           <Link className="text-gray-400 font-mono hover:text-cyan mx-8 font-bold hover:text-red1 transition ease-out duration-500 text-lg"to={"/"}>
-            <span>Contact</span>
+            <span 
+            onClick={()=>{
+              goTo(props.props.contact)
+            }} 
+            >Contact</span>
           </Link>
         </div>
       </div>

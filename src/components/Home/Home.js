@@ -108,7 +108,7 @@ function Home(props) {
         </Fade>
         {/* Contact */}
         <Fade direction="right">
-        <div  className="h-screen flex justify-center items-center">
+        <div id="contact" className="h-screen flex justify-center items-center">
           <div className="my-8 w-full md:w-3/5 flex flex-col justify-center items-center text-center">
             <h1 className="text-cyan text-6xl md:text-7xl font-bold">Get In Touch</h1>
             <span className="text-gray-500 font-semibold text-xl md:text-2xl">
